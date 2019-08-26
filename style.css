@@ -1,0 +1,167 @@
+*{
+  box-sizing: border-box; 
+}
+
+header{
+  max-width: 500px;
+}
+.error{
+  color: red;
+  text-align:center;
+}
+form{
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  color: aliceblue;
+  font-size: .9rem;
+}
+body{
+  
+  background: black;
+  color: white;
+} 
+.submit-button{
+  font-size: 1.1rem;
+  style: none;
+  width: 300px;
+  border: solid 1px red;
+  background-color: #333333;
+  font-family: 'Fira Code', monospace;
+  text-align: center;
+  color: red;
+  height: 30px;
+}
+#text-input{
+  background-color:transparent;
+  color: white;
+  text-align: center;
+  border: none;
+  border-bottom: solid 1px aliceblue;
+  width: 300px;
+  height: 30px;
+}
+
+
+img{
+  height: 210px;
+  display: inline-block;
+  clear: right;
+  border: solid 2pt red;
+  
+}
+  
+
+.logo{
+  width: 100%;
+  border: none;
+
+}
+.trailer {
+  color: red;
+  float: right;
+  position:relative;
+  bottom: 42px;
+  display: inline-block;
+  
+}
+.ratings{
+  display: inline-block;
+  width: 46%;
+  float: right;
+  position: relative;
+  bottom: 25px;
+  left: 5px;
+  padding: 10px;
+  
+}
+.title{
+  clear: right;
+  
+}
+.important{
+  color: red;
+}
+.results{
+  background: black;
+  color: aliceblue;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 442px) {
+  .ratings{
+    width: 100%;
+    bottom: 10px;
+    
+     
+  }
+  img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+  form{
+    font-size: .7rem;
+  }
+  .title{
+    text-align:center;
+
+  }
+  .trailer{
+    float:none;
+    text-align:center;
+    display:block;
+    bottom: 15px;
+
+  }
+  
+}
+  
+  
+  
+  
+
+
+
+@media screen and (min-width: 560px) {
+  
+  header{
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+     
+  }
+  .results{
+    display:flex;
+    flex-direction: row;
+    position: relative;
+    top: 350px;
+   
+  }
+  .container{
+    width: 2500px;
+    padding: 15px;
+    margin-left: 35px;
+   
+  }
+ 
+  .ratings{
+    padding: 0px;
+    margin-top: 0px;
+    margin-right: 50px;
+    bottom: 215px;
+    
+  }
+  
+  .trailer{
+    margin-right: 40px;
+    margin-bottom: 0px; 
+  }
+  .important{
+    text-align: left;
+  }
+  
+  
+}
+
+  
+

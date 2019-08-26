@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Screener Movie Recomendations</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.js"
+      integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="ScreenerLogo.jpg">
+      
+     <form>
+      <label for="text-input">
+        « Type in the name of a Movie you love »
+        <br /> 
+        
+      </label>
+      
+      
+      <input id="text-input" placeholder= "Type Your Favorite Movie Here" type="text" required>
+      <p> « and we'll show you
+          movies you'll love »</p>
+      
+      
+      <button type="submit" class="submit-button">Find Movies</button>
+    </form>
+    </header>
+    <section class="container">
+          <div class="results">
+          </div>
+    </section>
+    
+    <script src="script.js"></script>
+  </body>
+</html>
