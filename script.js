@@ -17,6 +17,9 @@ function genericFetch(url, callBack, movieID){
        
      callBack(responseJSON, movieID);
      })
+     .catch(err => {
+      $('.results').html(`Sorry, something went wrong`);
+     })
      
      
 }
@@ -27,7 +30,7 @@ function displayMovies(responseJSON){
     $('.results').append(`<h2 class="error">Sorry. We couldnt find that title in our database.</h2>`)
   }else{
   for (i=0; i<responseJSON.Similar.Results.length; i++){
-    $('.results').append(`<section class="container"><h2 class="title">${responseJSON.Similar.Results[i].Name}</h2> <a class="trailer" target="_blank" href="${responseJSON.Similar.Results[i].yUrl}">Watch Trailer</a> <div id="${responseJSON.Similar.Results[i].yID}"></div>`);
+    $('.results').append(`<section class="container"><h2 class="title">${responseJSON.Similar.Results[i].Name}</h2> <a class="trailer" target="_blank" href="${responseJSON.Similar.Results[i].yUrl}">Watch Trailer</a><div class="movieBox" id="${responseJSON.Similar.Results[i].yID}"></div>`);
     
 
     let movieID= `${responseJSON.Similar.Results[i].yID}`;
@@ -47,7 +50,7 @@ function displayRatings(responseJSON, movieID){
     $(`#${movieID}`).append(`<h3 class="error">No other info available</h3>`);
   }else{
 
-      $(`#${movieID}`).append(`<img src="${responseJSON.Poster}"><p class="ratings">${responseJSON.Plot}<br /><br /><span class="important">IMDB:</span> ${responseJSON.Ratings[0].Value}<br /><span class="important">${responseJSON.Ratings[1].Source}:</span> ${responseJSON.Ratings[1].Value}<br /><span class="important">Year:</span> ${responseJSON.Year} <span class="important">Length:</span>${responseJSON.Runtime}<br /><span class="important">Starring:</span> ${responseJSON.Actors}</p></section>`);
+      $(`#${movieID}`).append(`<img class="poster" src="${responseJSON.Poster}" alt="Movie Poster"><p class="ratings">${responseJSON.Plot}<br /><br /><span class="important">IMDB:</span> ${responseJSON.Ratings[0].Value}<br /><span class="important">${responseJSON.Ratings[1].Source}:</span> ${responseJSON.Ratings[1].Value}<br /><span class="important">Year:</span> ${responseJSON.Year} <span class="important">Length:</span>${responseJSON.Runtime}<br /><span class="important">Starring:</span> ${responseJSON.Actors}</p></section>`);
   }
   
   
@@ -60,7 +63,7 @@ function watchForm(){
 
     let search= $('#text-input').val();
     
-    let url=`https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${search}&k=${API_KEY}&info=1&type=movies&limit=5`;
+    let url=`https://cors-anywhere.herokuapp.com/https://tastedive.com/api/similar?q=${search}&k=${API_KEY}&info=1&type=movies&limit=6`;
 
     genericFetch(url, displayMovies);
     $('.results').empty();
