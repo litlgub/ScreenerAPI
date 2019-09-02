@@ -13,7 +13,7 @@ form{
   text-align: center;
   font-family: 'Fira Code', monospace;
   color: aliceblue;
-  font-size: .9rem;
+  font-size: .7rem;
 }
 body{
   
@@ -42,40 +42,44 @@ body{
 }
 
 
-img{
+.poster{
   height: 210px;
-  display: inline-block;
   clear: right;
   border: solid 2pt red;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   
 }
   
 
 .logo{
   width: 100%;
-  border: none;
+  height: 210px;
 
 }
 .trailer {
   color: red;
-  float: right;
   position:relative;
-  bottom: 42px;
-  display: inline-block;
+  bottom: 15px;
+  display: block;
+  text-align:center;
+    
+    
   
 }
 .ratings{
   display: inline-block;
-  width: 46%;
-  float: right;
+  width: 100%;
   position: relative;
-  bottom: 25px;
+  bottom: 10px;
   left: 5px;
   padding: 10px;
   
 }
 .title{
   clear: right;
+  text-align:center;
   
 }
 .important{
@@ -84,33 +88,53 @@ img{
 .results{
   background: black;
   color: aliceblue;
-  margin-bottom: 10px;
+  
 }
-@media screen and (max-width: 442px) {
-  .ratings{
-    width: 100%;
-    bottom: 10px;
-    
-     
-  }
-  img{
-    display: block;
+@media screen and (min-width: 482px) {
+  header{
     margin-left: auto;
     margin-right: auto;
-
+  }
+  .ratings{
+    display: inline-block;
+    width: 50%;
+    vertical-align: middle;
+    bottom: 30px;
+    left: 15px;
+    
+    
+      
+  }
+  .movieBox{
+    display: block;
+    height: 250px;
+  }
+  
+  
+  .poster{
+    display: inline-block;
+    float: left;
+    position: relative;
+    bottom: 20px;
+    width: 144px;
+    
+    
+    
+  
   }
   form{
-    font-size: .7rem;
+    font-size: .9rem;
   }
   .title{
-    text-align:center;
+    text-align:left;
 
   }
   .trailer{
-    float:none;
-    text-align:center;
-    display:block;
-    bottom: 15px;
+    float:right;
+    text-align:none;
+    display:inline-block;
+    bottom: 42px;
+    margin-right: 15px;
 
   }
   
@@ -122,45 +146,66 @@ img{
 
 
 
-@media screen and (min-width: 560px) {
+@media screen and (min-width: 700px) {
   
   header{
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-left: auto;
+    margin-right: auto;
      
   }
+  .display{
+    display: inline-block;
+
+  }
   .results{
-    display:flex;
-    flex-direction: row;
-    position: relative;
-    top: 350px;
-   
+  margin-bottom: 0px;
+  
+
   }
-  .container{
-    width: 2500px;
-    padding: 15px;
-    margin-left: 35px;
-   
-  }
+  
+
+.container{
+  display: inline-block;
+  width: 45%;
+  padding: 5px;
+  height: 325px;
+  margin-left: 10px;
+  vertical-align: top;
+  
+}
+.poster{
+  bottom: 10px;
+  height: 200px;
+  width: 134px;
+}  
+  
  
-  .ratings{
-    padding: 0px;
-    margin-top: 0px;
-    margin-right: 50px;
-    bottom: 215px;
+.ratings{
+  font-size: .9rem;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  bottom: 10px;
     
-  }
-  
-  .trailer{
-    margin-right: 40px;
-    margin-bottom: 0px; 
-  }
-  .important{
+    
+}
+.title{
+  display: inline-block;
+}
+.trailer{
+  bottom: -22px;
+  margin-right: 20px;
+}
+.important{
     text-align: left;
+}
+  
+  
+}
+@media screen and (min-width: 1024px) {
+  .results{
+    margin-left: 10%;
   }
-  
-  
 }
 
   
